@@ -1,19 +1,22 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-
+import { Entity, PrimaryGeneratedColumn, Column , OneToMany , ManyToOne } from 'typeorm';
+import { Device } from './Device';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id!: number;
+  account_id: String;
+
+  @OneToMany(() => Device, (device) => device.owner)
+  devices: Device[];
+
+  @ManyToOne(() => Device)
+  device_selected: Device;
 
   @Column()
-  firstName!: string;
+  nanu_id: string;
 
   @Column()
-  lastName!: string;
-
-  @Column({ unique: true })
-  email!: string;
+  joined_at: Date;
 
   @Column()
-  password!: string;
+  profile_img: URL;
 }
