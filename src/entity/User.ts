@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column , OneToMany , ManyToOne } from '
 import { Device } from './Device';
 @Entity()
 export class User {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('uuid')
   account_id: String;
 
   @OneToMany(() => Device, (device) => device.owner)
