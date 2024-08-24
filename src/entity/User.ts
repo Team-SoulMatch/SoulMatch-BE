@@ -18,5 +18,5 @@ export class User {
   joined_at: Date;
 
   @Column()
-  profile_img: URL;
+  profile_img: string;
 }

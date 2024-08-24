@@ -1,21 +1,21 @@
-import { Entity,Column,PrimaryGeneratedColumn,OneToOne, Generated, CreateDateColumn, Timestamp } from "typeorm";
+import { Entity,Column,PrimaryGeneratedColumn,OneToOne, CreateDateColumn} from "typeorm";
 
 @Entity()
 export class Volunteer {
     @PrimaryGeneratedColumn('uuid')
-    volunteer_id : String;
+    volunteer_id : string;
 
     @Column()
-    volunteer_name : String;
+    volunteer_name : string;
 
     @Column()
-    volunteer_location_more : String; 
+    volunteer_location_more : string; 
 
     @Column()
-    volunteer_location : String;
+    volunteer_location : string;
 
     @Column()
-    volunteer_url : String;
+    volunteer_url : string;
 
     @Column()
     volunteer_status : number;
@@ -33,7 +33,7 @@ export class Volunteer {
     volunteer_end : Date;
 
     @Column()
-    volunteer_message : String;
+    volunteer_message : string;
 
     @Column()
     volunteer_sido_code : number;

@@ -1,13 +1,13 @@
-import { Entity,Column,PrimaryGeneratedColumn,OneToOne } from "typeorm";
+import { Entity,Column,PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
 export class Notification {
     @PrimaryGeneratedColumn('uuid')
-    noti_id : String;
+    noti_id : string;
 
     @Column()
-    noti_name : String;
+    noti_name : string;
 
     @Column()
-    noti_url : String;
+    noti_url : string;
 }

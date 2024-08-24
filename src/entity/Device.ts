@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, Timestamp } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 import { User } from './User';
 
 @Entity()
@@ -10,11 +10,11 @@ export class Device {
   owner: User;
 
   @Column()
-  device_name : String;
+  device_name : string;
 
   @Column({type:"timestamp"})
-  device_login_at : Timestamp;
+  device_login_at : Date;
 
   @Column()
-  fcm_key : String;
+  fcm_key : string;
 }
