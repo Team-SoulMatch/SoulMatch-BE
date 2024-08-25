@@ -1,4 +1,4 @@
-export interface loginRequest {
+export interface LoginRequest {
     id:string;
     email:string;
     password_hash:string;

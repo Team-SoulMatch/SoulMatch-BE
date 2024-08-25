@@ -1,3 +1,3 @@
-export interface oAuth {
+export interface OauthRequest {
     AUTH :string;
 }
